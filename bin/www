@@ -90,5 +90,5 @@ function onListening() {
   debug('Listening on ' + bind);
 }
 
-mongoose.connect(env.process.MONGOLAB_URI);
+mongoose.connect(process.env.MONGOLAB_URI);
 mongoose.Promise = require('bluebird');
