@@ -1,11 +1,11 @@
 var mongoose = require('mongoose');
 
 var Ticket = new mongoose.Schema({
-  name:String,
+  name: String,
   phoneNumber: String,
   description: String,
-  createdAt : Date
+  createdAt: Date
 });
 
-var ticket = mongoose.model('ticket', Ticket);
+var ticket = mongoose.model('supportticket', Ticket);
 module.exports = ticket;
