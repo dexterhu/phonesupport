@@ -14,14 +14,15 @@ router.post('/connect', twilio.webhook({ validate: false }), function(req, res, 
   };
 
   var clientDialer = function(dial) {
-    //dial.client("support_agent");
-    dial.number(callerId);
+    dial.client("support_agent");
   };
 
   if (phoneNumber != null) {
     twiml.dial({ callerId: callerId }, numberDialer);
   } else {
-    twiml.dial({ callerId: callerId }, clientDialer);
+    //twiml.dial({ callerId: callerId }, clientDialer);
+    twiml.play('https://s3.amazonaws.com/antsquare-www/ringtone/land_on_mars.mp3');
+    twiml.dial(callerId, { record: true, callerId: callerId });
   }
 
   res.send(twiml.toString());
