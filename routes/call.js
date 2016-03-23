@@ -14,7 +14,8 @@ router.post('/connect', twilio.webhook({ validate: false }), function(req, res, 
   };
 
   var clientDialer = function(dial) {
-    dial.client("support_agent");
+    //dial.client("support_agent");
+    dial.number(callerId);
   };
 
   if (phoneNumber != null) {
