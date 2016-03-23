@@ -24,7 +24,9 @@
     "twiml",
     "webhooks"
   ],
-  "engines" : { "node" : ">=4.1.0 <5.5.0" },
+  "engines": {
+    "node": ">=4.1.0 <5.5.0"
+  },
   "dependencies": {
     "bluebird": "^3.2.1",
     "body-parser": "~1.13.2",
@@ -38,7 +40,7 @@
     "mongoose": "^4.3.7",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
-    "twilio": "^3.3.0-edge"
+    "twilio": "^2.9.0"
   },
   "devDependencies": {
     "chai": "^3.4.1",
