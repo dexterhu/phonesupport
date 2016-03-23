@@ -22,7 +22,7 @@ router.post('/connect', twilio.webhook({ validate: false }), function(req, res, 
   } else {
     //twiml.dial({ callerId: callerId }, clientDialer);
     twiml.play('https://s3.amazonaws.com/antsquare-www/ringtone/land_on_mars.mp3');
-    twiml.dial(callerId, { record: true });
+    twiml.dial(callerId, { record: true }, { callerId: callerId });
   }
 
   res.send(twiml.toString());
